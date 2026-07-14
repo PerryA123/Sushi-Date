@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Sushi Date?</title>
+
+<style>
+
+body{
+background:#fff5ef;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+
+background:white;
+padding:50px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+button{
+
+padding:15px 35px;
+font-size:22px;
+margin:20px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+
+}
+
+#yes{
+
+background:#3cb371;
+color:white;
+
+}
+
+#no{
+
+background:#ff5b5b;
+color:white;
+position:absolute;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>🍣</h1>
+
+<h2>Will you go on a sushi date with me?</h2>
+
+<button id="yes">YES ❤️</button>
+
+<button id="no">No</button>
+
+</div>
+
+<script>
+
+const no=document.getElementById("no");
+
+no.addEventListener("mouseover",()=>{
+
+const x=Math.random()*(window.innerWidth-120);
+const y=Math.random()*(window.innerHeight-60);
+
+no.style.left=x+"px";
+no.style.top=y+"px";
+
+});
+
+document.getElementById("yes").onclick=function(){
+
+document.body.innerHTML=`
+
+<div style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;background:#fff5ef;">
+
+<div style="text-align:center;">
+
+<h1>🥹❤️ YAY!! ❤️🥹</h1>
+
+<h2>It's a Sushi Date!</h2>
+
+<p>I can't wait to spend the evening with you.</p>
+
+<p><b>Date:</b> Friday at 7:00 PM</p>
+
+<p>🍣💕</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+</html>
